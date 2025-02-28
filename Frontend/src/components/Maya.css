@@ -1,0 +1,255 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #dee5c5;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Navbar changes when scrolled */
+.navbar.scrolled {
+    background-color: #146013;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Logo */
+.shop-icon {
+    font-size: 1.5rem;
+    color: #146013;
+    margin-right: 8px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #146013;
+    gap: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change logo color when scrolled */
+.navbar.scrolled .shop-icon,
+.navbar.scrolled .logo {
+    color: #ffffff;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #146013;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Change navbar text color when scrolled */
+.navbar.scrolled .nav-links a {
+    color: #ffffff !important;
+}
+
+/* Ensure hover effect remains the same even when scrolled */
+.navbar.scrolled .nav-links a:hover {
+    color: #f39c12 !important;
+}
+
+/* Dropdown Styling */
+.nav-links li:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    padding: 10px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    color: #146013;
+    display: block;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for dropdown menu */
+.dropdown-menu li a:hover {
+    background-color: #f3f3f3;
+    color: #f39c12;
+}
+
+/* Dropdown menu text turns green when navbar is scrolled */
+.navbar.scrolled .dropdown-menu li a {
+    color: #146013 !important;
+}
+
+/* Hover effect for dropdown menu items when scrolled */
+.navbar.scrolled .dropdown-menu li a:hover {
+    color: #f39c12 !important;
+}
+
+/* Right Section (Search, Profile, Cart) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #146013;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    padding: 5px 10px;
+    width: 250px;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Change search bar border when scrolled */
+.navbar.scrolled .search-container {
+    border-color: #ffffff;
+}
+
+/* Search Input */
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    flex: 1;
+    padding: 5px;
+    color: #146013;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change search text color when scrolled */
+.navbar.scrolled .search-input {
+    color: #ffffff;
+}
+
+/* Search Icon */
+.search-icon {
+    color: #146013;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Search icon turns green when scrolled */
+.navbar.scrolled .search-icon {
+    color: #146013!important;
+}
+
+/* Profile & Cart Icons */
+.icon {
+    font-size: 1.5rem;
+    color: #146013;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change icon colors when navbar is scrolled */
+.navbar.scrolled .icon {
+    color: #ffffff;
+}
+
+/* Hover Effect */
+.icon:hover {
+    color: #f39c12;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .right-section {
+        margin-top: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}

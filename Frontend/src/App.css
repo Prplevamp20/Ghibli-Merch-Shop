@@ -1,0 +1,92 @@
+/* Apply background color to the entire page */
+body {
+    background-color: #dee5c5 !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure the App container takes full height */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container {
+    background-color: #dee5c5; /* Set background color */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content from the top */
+    padding-top: 80px; /* Adjust for Navbar */
+}
+
+/* ✅ Products should align in a single row */
+.products-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures all products are in a single row */
+    justify-content: center; /* Centers products horizontally */
+    gap: 20px; /* Space between products */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    padding: 20px;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+/* ✅ Make sure product cards have a consistent width */
+.product-card {
+    min-width: 250px; /* Ensures each card has a fixed width */
+}
+
+/* ✅ Full-width image section */
+.full-width-image-container {
+    width: 100%;
+    position: relative; /* Ensure positioning for absolute elements */
+}
+
+/* ✅ Full-size image */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ✅ Customize Now Button - Positioned Above the Image */
+.customize-button {
+    position: absolute;
+    bottom: 13%;
+    right: 17.3%;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 39px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ✅ New Arrivals Heading */
+.new-arrivals-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #146013;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-arrivals-heading::before,
+.new-arrivals-heading::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #146013;
+    margin: 0 15px;
+}

@@ -1,0 +1,124 @@
+/* Footer Styling */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 50px;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+    padding: 0 20px;
+}
+
+/* Footer Titles */
+.footer-title {
+    color: #ffa500;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #84C4E2;
+}
+
+/* Contact Section */
+.footer-contact p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* Social Icons Below Phone */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+/* Social Icons Styling */
+.footer-social a {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #84C4E2;
+}
+
+/* Increased Footer Image Size */
+.footer-image {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Default Footer Image Size */
+.footer-image img {
+    height: 200px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+/* Increase Image Size for Larger Screens */
+@media (min-width: 1200px) {
+    .footer-image img {
+        height: 300px;
+        max-width: 300px;
+    }
+}
+
+/* Copyright Section */
+.footer-bottom {
+    text-align: center;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-image {
+        margin-top: 20px;
+    }
+}
